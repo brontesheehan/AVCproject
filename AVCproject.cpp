@@ -1,4 +1,10 @@
-{
+#include <iostream>
+#include "E101.h"
+
+using namespace std;
+
+
+int main(){
   int err;
   cout<<" Hello"<<endl;
   err = init(0);
@@ -29,8 +35,27 @@
 	 set_digital(3,0);
 	 set_digital(4,0);
 	 hardware_exchange();
-	 take_picture();
+	// take_picture();
 	 update_screen();
+	 
+	 int y = 120;
+	 int x = 0;
+	 int whiteness = 0;
+	 //int black = 0;
+	 //int totblack = 0;
+	 
+	 while (x < 320){
+		 int whiteness = get_pixel(y, x, 3);
+		 //int black = get_pixel(y, x, 0);
+		 x++; 
+		 //if(((float)whiteness)){
+					//totblack++;
+		 printf("whiteness\n");
+		 //printf("black\n");
+		 //printf("totblack\n");
+		 
+		 
+		 }
 	 
 	 //char fname[5]={'r','r','r','r','r'};
 	 //save_picture(fname);
@@ -44,4 +69,5 @@
     stoph();
 	
 	return 0;
+}
 }
